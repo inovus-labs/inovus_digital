@@ -1,3 +1,41 @@
-{{!-- <div class="container-fluid">
-<h1 class="">{{title}}</h1>
-</div> --}}
+<!--Home Section-->
+<section class="home-section d-flex flex-column justify-content-center align-content-center" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Inovus Digital</h1>
+                <p>A dynamic platform designed to showcase the real-time progress/ learning curve of the people who comes to INOVUS LABS IEDC.</p>
+                <a href="/" class="btn">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    function updateClock() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // Add leading zeros if needed
+        hours = (hours < 10 ? "0" : "") + hours;
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+        seconds = (seconds < 10 ? "0" : "") + seconds;
+
+        // Choose between 12-hour and 24-hour format
+        var timeFormat = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12; // Handle midnight
+        var currentTimeString = hours + ":" + minutes + ":" + seconds + " " + timeFormat;
+
+        document.getElementById("clock").innerText = currentTimeString;
+    }
+
+    // Update the clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call to display the clock immediately
+    updateClock();
+</script>
