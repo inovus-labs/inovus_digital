@@ -1,0 +1,44 @@
+.outer-container{
+    padding-top: 100px;
+}
+
+.inner-container{
+    display: flex;
+    justify-content: center;
+}
+
+.user-form-div{
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+
+.btn-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.cancel-btn{
+    border: none;
+    width: 150px;
+    background-color: red;
+    color: white;
+}
+
+.cancel-btn:hover{
+    background-color: white;
+    color: red;
+}
+
+.submit-btn{
+    border: none;
+    width: 150px;
+    background-color: green;
+    color: white;
+}
+
+.submit-btn:hover{
+    background-color: white;
+    color: green;
+}
