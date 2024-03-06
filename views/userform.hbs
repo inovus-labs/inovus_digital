@@ -8,10 +8,15 @@
                             <img src="/images/avatar3.png" alt="Image">
                         </div>
 
+                        {{#if alert}}
+                        <div class="alert alert-success" role="alert">
+                            Data added succesfully
+                        </div>
+                        {{/if}}
+
                         <div class="form-group form-grp-div">
                             <label>Name</label>
-                            <input type="text" placeholder="Type your name" id="" list="suggestions"
-                                class="form-control">
+                            <input type="text" placeholder="Type your name" list="suggestions" class="form-control">
                             <datalist id="suggestions">
                                 <option value="Milan">
                                 <option value="Milosh">
@@ -26,7 +31,7 @@
 
                         <div class="form-group form-grp-div">
                             <label>Role</label>
-                            <input type="text" class="form-control" placeholder="Role" id="" name="">
+                            <input type="text" class="form-control" placeholder="Role" name="">
                         </div>
 
                         <div class="btn-div">
@@ -37,19 +42,19 @@
                 </div>
 
                 <div id="hidden-form">
-                    <form action="/add_user_info" method="post" enctype="multipart/form-data"></form>
+                    <form action="/add_user_info" method="post" enctype="multipart/form-data">
                         <div class="form-image-display">
                             <img src="/images/avatar3.png" alt="Image">
                         </div>
 
                         <div class="form-group form-grp-div">
                             <label>Name</label>
-                            <input type="text" placeholder="Type your name" id="" class="form-control">
+                            <input type="text" placeholder="Type your name" class="form-control" name="name">
                         </div>
 
                         <div class="form-group form-grp-div">
                             <label>Role</label>
-                            <input type="text" class="form-control" placeholder="Role" id="" name="">
+                            <input type="text" class="form-control" placeholder="Role" name="role">
                         </div>
 
                         <div class="form-group form-grp-div">
