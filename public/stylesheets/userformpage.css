@@ -1,5 +1,5 @@
 .outer-container{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .inner-container{
@@ -14,6 +14,7 @@
 }
 
 .btn-div{
+    padding-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -41,4 +42,43 @@
 .submit-btn:hover{
     background-color: white;
     color: green;
+}
+
+.form-image-display{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+.form-image-display img{
+    width: 100px;
+    height: auto;
+    border-radius: 50%
+}
+
+.form-grp-div{
+    padding-top: 10px;
+}
+
+.click-here-btn{
+    margin: 0;
+    color: cadetblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#outer-form{
+    display: block;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+#hidden-form{
+    display: none;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
 }

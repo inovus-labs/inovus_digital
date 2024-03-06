@@ -2,30 +2,88 @@
     <div class="container outer-container">
         <div class="row inner-container">
             <div class="col-lg-6 user-form-div">
-                <form>
+                <div id="outer-form">
+                    <form action="">
+                        <div class="form-image-display">
+                            <img src="/images/avatar3.png" alt="Image">
+                        </div>
 
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" placeholder="Type your name" id="" list="suggestions" class="form-control">
-                    <datalist id="suggestions">
-                        <option value="Milan">
-                        <option value="Milosh">
-                        <option value="Sony">
-                    </datalist>
+                        <div class="form-group form-grp-div">
+                            <label>Name</label>
+                            <input type="text" placeholder="Type your name" id="" list="suggestions"
+                                class="form-control">
+                            <datalist id="suggestions">
+                                <option value="Milan">
+                                <option value="Milosh">
+                                <option value="Sony">
+                            </datalist>
+                        </div>
+
+                        <div class="">
+                            <p class="click-here-btn" onclick="changeForm()">Can't find your name? Click
+                                Here</p>
+                        </div>
+
+                        <div class="form-group form-grp-div">
+                            <label>Role</label>
+                            <input type="text" class="form-control" placeholder="Role" id="" name="">
+                        </div>
+
+                        <div class="btn-div">
+                            <button class="btn btn-primary cancel-btn">Cancel</button>
+                            <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                        </div>
+                    </form>
                 </div>
 
-                    <div class="form-group">
-                        <label>Role</label>
-                        <input type="text" class="form-control" placeholder="Role" id="" name="">
-                    </div>
+                <div id="hidden-form">
+                    <form action="">
+                        <div class="form-image-display">
+                            <img src="/images/avatar3.png" alt="Image">
+                        </div>
 
-                    <div class="btn-div">
-                        <button class="btn btn-primary cancel-btn">Cancel</button>
-                        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-                    </div>
+                        <div class="form-group form-grp-div">
+                            <label>Name</label>
+                            <input type="text" placeholder="Type your name" id="" class="form-control">
+                        </div>
 
-                </form>
+                        <div class="form-group form-grp-div">
+                            <label>Role</label>
+                            <input type="text" class="form-control" placeholder="Role" id="" name="">
+                        </div>
+
+                        <div class="form-group form-grp-div">
+                            <label>Upload your image</label>
+                            <input type="file" class="form-control-file" name="image">
+                        </div>
+
+                        <div class="btn-div">
+                            <button class="btn btn-primary cancel-btn">Cancel</button>
+                            <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function changeForm() {
+        let x = document.getElementById('hidden-form')
+        let y = document.getElementById('outer-form')
+
+        console.log(x)
+
+        console.log(x.style.display)
+        console.log(y.style.display)
+
+        if (x.style.display === "" || x.style.display === "none") {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            x.style.display = "none";
+            y.style.display = "block";
+        }
+    }
+</script>
