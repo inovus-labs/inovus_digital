@@ -10,4 +10,21 @@ router.get('/', function (req, res, next) {
   });
 });
 
+router.get('/users', function(req, res, next) {
+  
+  res.render('userform', {
+    title: 'Inovus Digital',
+    style: 'userformpage.css',
+  });
+});
+
+router.get('/live', (req, res)=>{
+
+  res.render('live_users',{
+    title: 'live users',
+    header: true,
+    style: 'live_users.css'
+  })
+})
+
 module.exports = router;
