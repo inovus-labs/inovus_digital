@@ -1,0 +1,84 @@
+.outer-container{
+    padding-top: 50px;
+}
+
+.inner-container{
+    display: flex;
+    justify-content: center;
+}
+
+.user-form-div{
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+
+.btn-div{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.cancel-btn{
+    border: none;
+    width: 150px;
+    background-color: red;
+    color: white;
+}
+
+.cancel-btn:hover{
+    background-color: white;
+    color: red;
+}
+
+.submit-btn{
+    border: none;
+    width: 150px;
+    background-color: green;
+    color: white;
+}
+
+.submit-btn:hover{
+    background-color: white;
+    color: green;
+}
+
+.form-image-display{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 25px;
+}
+.form-image-display img{
+    width: 100px;
+    height: auto;
+    border-radius: 50%
+}
+
+.form-grp-div{
+    padding-top: 10px;
+}
+
+.click-here-btn{
+    margin: 0;
+    color: cadetblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#outer-form{
+    display: block;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+#hidden-form{
+    display: none;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
+}
