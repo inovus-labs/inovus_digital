@@ -5,7 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 const hbs = require('express-handlebars')
+const db = require('./config/connection')
 const fileUpload = require('express-fileupload')
+
+db.connect()
 
 var indexRouter = require('./routes/index');
 
