@@ -9,9 +9,14 @@
                         </div>
 
                         {{#if alert}}
-                        <div class="alert alert-success" role="alert">
-                            Data added succesfully
+
+                        <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+                            <strong>Data added succesfully</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+
                         {{/if}}
 
                         <div class="form-group form-grp-div">
@@ -31,7 +36,12 @@
 
                         <div class="form-group form-grp-div">
                             <label>Role</label>
-                            <input type="text" class="form-control" placeholder="Role" name="">
+                            <select class="form-control" name="role">
+                                <option>Learn new things</option>
+                                <option>Project</option>
+                                <option>Visitor</option>
+                                <option>Mentor</option>
+                            </select>
                         </div>
 
                         <div class="btn-div">
@@ -44,7 +54,7 @@
                 <div id="hidden-form">
                     <form action="/add_user_info" method="post" enctype="multipart/form-data">
                         <div class="form-image-display">
-                            <img src="/images/avatar3.png" alt="Image">
+                            <img src="/images/avatar3.png" alt="Image" id="preview">
                         </div>
 
                         <div class="form-group form-grp-div">
@@ -54,12 +64,17 @@
 
                         <div class="form-group form-grp-div">
                             <label>Role</label>
-                            <input type="text" class="form-control" placeholder="Role" name="role">
+                            <select class="form-control" name="role">
+                                <option>Learn new things</option>
+                                <option>Project</option>
+                                <option>Visitor</option>
+                                <option>Mentor</option>
+                            </select>
                         </div>
 
                         <div class="form-group form-grp-div">
                             <label>Upload your image</label>
-                            <input type="file" class="form-control-file" name="image">
+                            <input type="file" class="form-control-file" name="image" id="filetag">
                         </div>
 
                         <div class="btn-div">
@@ -89,6 +104,27 @@
         } else {
             x.style.display = "none";
             y.style.display = "block";
+        }
+    }
+
+    var fileTag = document.getElementById("filetag"),
+        preview = document.getElementById("preview");
+
+    fileTag.addEventListener("change", function () {
+        changeImage(this);
+    });
+
+    function changeImage(input) {
+        var reader;
+
+        if (input.files && input.files[0]) {
+            reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.setAttribute('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
         }
     }
 </script>
