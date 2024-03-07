@@ -16,7 +16,7 @@
     background-attachment: fixed;
 }
 
-.home-section h1 {
+.main-head{
     margin: 0;
     font-weight: 700;
     font-size: 80px;
@@ -27,9 +27,9 @@
     padding-bottom: 5px;
 }
 
-.home-section p {
+.sub-paragraph{
     margin: 0;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 20px;
     color: #ffffff;
     font-family: var(--primary-font);
@@ -37,7 +37,7 @@
     padding-bottom: 20px;
 }
 
-.home-section .btn {
+.index-btn {
     background-color: red;
     color: #ffffff;
     font-family: var(--primary-font);
@@ -45,7 +45,7 @@
     padding: 5px 15px;
 }
 
-.home-section .btn:hover {
+.index-btn:hover {
     background-color: white;
     color: red;
 }

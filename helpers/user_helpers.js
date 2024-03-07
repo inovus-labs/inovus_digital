@@ -10,5 +10,13 @@ module.exports = {
                 resolve(response)
             })
         })
+    },
+
+    getAllUsers: ()=>{
+        return new Promise((resolve, reject)=>{
+            db.collection(collections.USER_COLLECTIONS).find().toArray().then((userData)=>{
+                resolve(userData)
+            })
+        })
     }
 }
