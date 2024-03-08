@@ -11,12 +11,10 @@
     padding-top: 100px;
 }
 
-.card {
-    margin-right: 20px;
-    margin-bottom: 20px;
+.card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 15%;
+    width: 20%;
     padding: 10px;
     border-radius: 5px;
 }
@@ -28,6 +26,9 @@
 .img-div{
     display: flex;
     justify-content: center;
+}
+.userimg{
+    height: 100px;
 }
 
 .user-details-div{
@@ -68,4 +69,14 @@ hr{
     text-align: left;
     font-family: var(--secondary-font);
     color: black;
+}
+
+.marquee{
+    white-space: nowrap;
+    overflow: hidden;
+} 
+
+.marquee-items{
+    display: inline-block;
+    margin-right: 20px;
 }
