@@ -2,93 +2,60 @@
     <div class="container outer-container">
         <div class="row inner-container">
             <div class="col-lg-6 user-form-div">
-                <div id="outer-form">
-                    <form action="">
+
+                <div class="input-form">
+                    <form action="/users" method="post" enctype="multipart/form-data">
                         <div class="form-image-display">
-                            <img src="/images/avatar3.png" alt="Image">
+                            <img src="/images/avatar3.png" alt="Image" id="img-preview">
                         </div>
-
-                        {{#if alert}}
-                        <div class="alert alert-success" role="alert">
-                            Data added succesfully
-                        </div>
-                        {{/if}}
-
+                        
                         <div class="form-group form-grp-div">
                             <label>Name</label>
-                            <input type="text" placeholder="Type your name" list="suggestions" class="form-control">
-                            <datalist id="suggestions">
-                                <option value="Milan">
-                                <option value="Milosh">
-                                <option value="Sony">
-                            </datalist>
-                        </div>
-
-                        <div class="">
-                            <p class="click-here-btn" onclick="changeForm()">Can't find your name? Click
-                                Here</p>
+                            <input type="text" placeholder="Enter your name" class="form-control" id="name" name="name">
                         </div>
 
                         <div class="form-group form-grp-div">
-                            <label>Role</label>
-                            <input type="text" class="form-control" placeholder="Role" name="">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter your email" class="form-control" name="email">
+                        </div>
+
+                        <div class="form-group form-grp-div">
+                            <label>Program/Domain</label>
+                            <input type="text" placeholder="Enter a program" class="form-control" name="program">
+                        </div>
+
+                        <div class="form-group form-grp-div">
+                            <label>Purpose of visit</label>
+                            <select class="form-control" name="role">
+                                <option>Learning</option>
+                                <option>Building a Project</option>
+                                <option>Explore</option>
+                                <option>Mentor</option>
+                            </select>
                         </div>
 
                         <div class="btn-div">
-                            <button class="btn btn-primary cancel-btn">Cancel</button>
-                            <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                            <a class="btn cancel-btn" href="/users">Cancel</a>
+                            <button type="submit" class="btn submit-btn">Submit</button>
                         </div>
                     </form>
                 </div>
 
-                <div id="hidden-form">
-                    <form action="/add_user_info" method="post" enctype="multipart/form-data">
-                        <div class="form-image-display">
-                            <img src="/images/avatar3.png" alt="Image">
-                        </div>
-
-                        <div class="form-group form-grp-div">
-                            <label>Name</label>
-                            <input type="text" placeholder="Type your name" class="form-control" name="name">
-                        </div>
-
-                        <div class="form-group form-grp-div">
-                            <label>Role</label>
-                            <input type="text" class="form-control" placeholder="Role" name="role">
-                        </div>
-
-                        <div class="form-group form-grp-div">
-                            <label>Upload your image</label>
-                            <input type="file" class="form-control-file" name="image">
-                        </div>
-
-                        <div class="btn-div">
-                            <button class="btn btn-primary cancel-btn">Cancel</button>
-                            <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    function changeForm() {
-        let x = document.getElementById('hidden-form')
-        let y = document.getElementById('outer-form')
+    
+    let nameTag = document.getElementById('name')
+    let imagePreview = document.getElementById('img-preview')
 
-        console.log(x)
+    nameTag.addEventListener("change", ()=>{
 
-        console.log(x.style.display)
-        console.log(y.style.display)
+        let userName = document.getElementById('name').value
+        let imgAPI = 'https://api.dicebear.com/7.x/initials/svg?seed='+userName
+        imagePreview.setAttribute('src', imgAPI)
+    })
 
-        if (x.style.display === "" || x.style.display === "none") {
-            x.style.display = "block";
-            y.style.display = "none";
-        } else {
-            x.style.display = "none";
-            y.style.display = "block";
-        }
-    }
 </script>

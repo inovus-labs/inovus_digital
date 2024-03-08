@@ -53,7 +53,7 @@
 }
 .form-image-display img{
     width: 100px;
-    height: auto;
+    height: 100px;
     border-radius: 50%
 }
 
@@ -69,15 +69,7 @@
 }
 
 
-#outer-form{
-    display: block;
-    padding: 20px;
-    border-radius: 25px;
-    background-color: white;
-}
-
-#hidden-form{
-    display: none;
+.input-form{
     padding: 20px;
     border-radius: 25px;
     background-color: white;
