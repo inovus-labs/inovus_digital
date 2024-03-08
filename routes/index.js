@@ -33,7 +33,7 @@ router.get('/live', (req, res) => {
     console.log(userData)
     res.render('live_users', {
       title: 'Live',
-      Headers: true,
+      header: true,
       style: 'live_users.css',
       userData
     })
