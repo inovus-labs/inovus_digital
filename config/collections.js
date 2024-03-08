@@ -1,3 +1,3 @@
 module.exports = {
-    USER_COLLECTIONS: 'users'
+    USER_COLLECTIONS: 'live'
 }
