@@ -1,19 +1,22 @@
 <div class="container-fluid container-fluid-div">
     <div class="container container-div">
         <div class="row">
-            {{#each userData}}
 
+            {{#each userData}}
             <div class="card">
                 <div class="img-div">
-                    <img src="https://api.dicebear.com/7.x/identicon/svg?seed={{this.name}}" alt="Avatar" class="userimg">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?seed={{this.name}}" alt="Avatar" class="userimg img-fluid">
                 </div>
                 <div class="user-details-div">
-                    <h4><b>John Doe</b></h4>
-                    <p>Architect & Engineer</p>
+                    <h4 class="user-name">{{this.name}}</h4>
+                    <p class="user-email">{{this.email}}</p>
+                    <hr>
+                    <p class="user-pgrm">{{this.program}}</p>
+                    <p class="user-role">{{this.role}}</p>
                 </div>
             </div>
-
             {{/each}}
+            
         </div>
     </div>
 </div>
