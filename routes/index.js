@@ -30,7 +30,6 @@ router.post('/users', (req, res) => {
 router.get('/live', (req, res) => {
 
   userHelpers.getAllUsers().then((userData)=>{
-    console.log(userData)
     res.render('live_users', {
       title: 'Live',
       header: true,
