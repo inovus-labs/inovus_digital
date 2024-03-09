@@ -1,22 +1,29 @@
-<div class="container-fluid">
-    <div class="container container-div">
-        <div class="owl-carousel">
-            {{#each userData}}
+<div class="container-div mx-5">
+    <div class="owl-carousel">
+        {{#each userData}}
+
+        <div class="p-3">
             <div class="card">
-                <div class="img-div">
-                    <img src="https://api.dicebear.com/7.x/initials/svg?seed={{this.name}}" alt="Avatar"
-                        class="userimg">
+
+                <div class="img-div mb-3">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar" class="userimg">
                 </div>
                 <div class="user-details-div">
-                    <h4 class="user-name">{{this.name}}</h4>
-                    <p class="user-email">{{this.email}}</p>
+                    <div class="d-flex flex-column">
+                        <h4 class="user-name">{{this.name}}</h4>
+                        <p class="user-email">{{this.email}}</p>
+                    </div>
                     <hr>
-                    <p class="user-pgrm">{{this.program}}</p>
-                    <p class="user-role">{{this.role}}</p>
+                    <div>
+                        <p class="user-pgrm">{{this.program}}</p>
+                        <p class="user-role">{{this.role}}</p>
+                    </div>
                 </div>
+
             </div>
-            {{/each}}
         </div>
+
+        {{/each}}
     </div>
 </div>
 

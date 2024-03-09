@@ -1,3 +1,4 @@
+
 module.exports = {
-    USER_COLLECTIONS: 'live'
+    LIVE_COLLECTIONS: 'live'
 }

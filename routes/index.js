@@ -3,33 +3,36 @@ var router = express.Router();
 
 const userHelpers = require('../helpers/user_helpers')
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
 
+// GET home page
+router.get('/', function (req, res, next) {
   res.render('index', {
-    title: 'Inovus Digital',
+    title: 'Home',
     style: 'index.css'
   })
 })
 
-router.get('/users', function (req, res, next) {
 
+// GET user submission page
+router.get('/users', function (req, res, next) {
   res.render('userform', {
-    title: 'Inovus Digital',
+    title: 'Submit',
     style: 'userformpage.css',
   })
 })
 
-router.post('/users', (req, res) => {
 
+// POST user submission page
+router.post('/users', (req, res) => {
   userHelpers.addUserInfo(req.body).then((response) => {
     res.redirect('/live')
   })
 })
 
-router.get('/live', (req, res) => {
 
-  userHelpers.getAllUsers().then((userData)=>{
+// GET live users page
+router.get('/live', (req, res) => {
+  userHelpers.getAllUsers().then((userData) => {
     res.render('live_users', {
       title: 'Live',
       header: true,
@@ -38,5 +41,7 @@ router.get('/live', (req, res) => {
     })
   })
 })
+
+
 
 module.exports = router;
