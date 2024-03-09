@@ -1,7 +1,5 @@
-const mongoose = require('mongoose');
-// const url = "mongodb://127.0.0.1:27017/inovuslive";
-const url = "mongodb+srv://milan-sony:hpWvfwIgWUQmIB3A@inovus-labs.lwks89q.mongodb.net/inovus_digital";
 
+const mongoose = require('mongoose');
 require("dotenv").config()
 
 module.exports = {
@@ -9,13 +7,14 @@ module.exports = {
     connect: () => {
         mongoose.connect(process.env.mongoDB_URL)
             .then(() => {
-                console.log("Connected to MongoDB\n");
+                console.log("\nConnected to MongoDB Atlas\n");
             }).catch((error) => {
-                console.log("MongoDB not connected\n" + error);
+                console.log("\nError connecting to MongoDB Atlas\n", error);
             });
     },
 
     collection: (name) => {
         return mongoose.connection.db.collection(name);
     }
+
 };
