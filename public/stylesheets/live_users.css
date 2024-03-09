@@ -11,10 +11,14 @@
     padding-top: 100px;
 }
 
+.carousel-item {
+    background-color: red;
+    padding: 1rem;
+}
+
 .card{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 20%;
     padding: 10px;
     border-radius: 5px;
 }
@@ -49,12 +53,8 @@
     text-align: left;
     font-family: var(--secondary-font);
     color: grey;
-    padding-bottom: 10px;
 }
-hr{
-    margin: 0;
-    padding-bottom: 10px;
-}
+
 .user-pgrm{
     margin: 0;
     font-weight: 700;
@@ -69,20 +69,4 @@ hr{
     text-align: left;
     font-family: var(--secondary-font);
     color: black;
-}
-
-.marquee{
-    white-space: nowrap;
-    overflow: hidden;
-} 
-
-.marquee-items{
-    display: inline-block;
-    margin-right: 20px;
-    animation: marquee 1s linear infinite;
-}
-
-@keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
 }

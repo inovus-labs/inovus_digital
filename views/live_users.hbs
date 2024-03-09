@@ -1,24 +1,28 @@
-<div class="container-fluid container-fluid-div">
-    <div class="container container-div">
-        <div class="marquee">
-
-                {{#each userData}}
-                <div class="card marquee-items">
-                    <div class="img-div">
-                        <img src="https://api.dicebear.com/7.x/initials/svg?seed={{this.name}}" alt="Avatar"
-                            class="userimg img-fluid">
-                    </div>
-                    <div class="user-details-div">
-                        <h4 class="user-name">{{this.name}}</h4>
-                        <p class="user-email">{{this.email}}</p>
-                        <hr>
-                        <p class="user-pgrm">{{this.program}}</p>
-                        <p class="user-role">{{this.role}}</p>
-                    </div>
-                </div>
-                {{/each}}
-
+<div class="your-class">
+    <div class="card">
+        <div class="img-div">
+            <img src="https://api.dicebear.com/7.x/initials/svg?seed={{this.name}}" alt="Avatar"
+                class="userimg img-fluid">
         </div>
-
+        <div class="user-details-div">
+            <h4 class="user-name">Milan</h4>
+            <p class="user-email">{{this.email}}</p>
+            <hr>
+            <p class="user-pgrm">{{this.program}}</p>
+            <p class="user-role">{{this.role}}</p>
+        </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.your-class').slick({
+            $('.autoplay').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    });
+</script>
