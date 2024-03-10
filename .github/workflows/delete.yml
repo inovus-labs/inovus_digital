@@ -1,8 +1,9 @@
 name: Midnight Delete
 
 on:
-  schedule:
-    - cron: '52 1 * * *' # Run every midnight
+  push:
+    branches:
+      - master
 
 jobs:
   delete-data:
