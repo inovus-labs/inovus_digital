@@ -23,5 +23,5 @@ jobs:
 
     - name: Run delete.js
       env:
-        MONGODB_URI: ${{ secrets.MONGODB_URL }}
+        MONGODB_URL: ${{ secrets.MONGODB_URL }}
       run: node delete.js
