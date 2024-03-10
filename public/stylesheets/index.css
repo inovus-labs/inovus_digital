@@ -1,11 +1,15 @@
 /* navbar */
-.navbar-div{
+.navbar-div {
     background-color: rgba(255, 255, 255, 1);
 }
-.brand-img img{
+
+
+.brand-img img {
     width: auto;
     height: 50px;
 }
+
+
 /* Home section */
 .home-section {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -16,7 +20,7 @@
     background-attachment: fixed;
 }
 
-.main-head{
+.main-head {
     margin: 0;
     font-weight: 700;
     font-size: 80px;
@@ -27,7 +31,8 @@
     padding-bottom: 5px;
 }
 
-.sub-paragraph{
+
+.sub-paragraph {
     margin: 0;
     font-weight: 500;
     font-size: 20px;
