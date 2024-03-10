@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const userHelpers = require('./helpers/user_helpers.js')
 
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
 
         console.log("\n--- Connected to MongoDB Atlas");
