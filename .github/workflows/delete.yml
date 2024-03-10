@@ -2,7 +2,7 @@ name: Midnight Delete
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Run every midnight
+    - cron: '52 1 * * *' # Run every midnight
 
 jobs:
   delete-data:
