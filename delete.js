@@ -18,3 +18,8 @@ mongoose.connect(process.env.MONGODB_URL)
     }).catch((error) => {
         console.log("\n --- Error connecting to MongoDB Atlas\n", error);
     });
+
+
+setTimeout(() => {
+    process.exit()
+}, 5000);
