@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const userHelpers = require('./helpers/user_helpers.js')
 
 
-mongoose.connect(process.env.mongoDB_URL)
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
 
         console.log("\n--- Connected to MongoDB Atlas");
@@ -18,3 +18,8 @@ mongoose.connect(process.env.mongoDB_URL)
     }).catch((error) => {
         console.log("\n --- Error connecting to MongoDB Atlas\n", error);
     });
+
+
+setTimeout(() => {
+    process.exit()
+}, 5000);
