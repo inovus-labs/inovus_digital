@@ -4,7 +4,7 @@
         {{#if users}}
         {{#each users}}
         <div class="corousel">
-            <div class="card">
+            <div class="card corousel-card">
                 <div class="img-div">
                     <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
                         class="userimg">
@@ -26,7 +26,7 @@
         {{#if allUsersData}}
         <div class="owl-carousel">
         {{#each allUsersData}}
-            <div class="card">
+            <div class="card owl-corousel-card">
                 <div class="img-div">
                     <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
                         class="userimg">
@@ -44,7 +44,7 @@
         {{/each}}
         </div>
         {{/if}}
-        
+
     </div>
 </div>
 
