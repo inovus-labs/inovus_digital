@@ -33,15 +33,23 @@ router.post('/users', (req, res) => {
 // GET live users page
 router.get('/live', (req, res) => {
   userHelpers.getAllUsers().then((userData) => {
-    res.render('live_users', {
-      title: 'Live',
-      header: true,
-      style: 'live_users.css',
-      userData
-    })
+    if (userData.length >= 6) {
+      res.render('live_users', {
+        title: 'Live',
+        header: true,
+        style: 'live_users.css',
+        allUsersData: userData
+      })
+    } else {
+      res.render('live_users', {
+        title: 'Live',
+        header: true,
+        style: 'live_users.css',
+        users: userData
+      })
+    }
   })
 })
-
 
 
 module.exports = router;
