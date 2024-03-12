@@ -11,6 +11,21 @@
     padding: 0px 50px 0px 50px;
 }
 
+.blink {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+    display: none;
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
 .header {
     margin: 0;
     font-size: 24px;
