@@ -23,10 +23,10 @@ module.exports = {
     getAllMentors: () => {
         return new Promise(async (resolve, reject) => {
             await db.collection(collections.LIVE_COLLECTIONS).find({ role: "Mentor" }).toArray().then((mentors) => {
-                console.log("Mentors are:", mentors)
+                // console.log("Mentors are:", mentors)
                 resolve(mentors)
             }).catch((err) => {
-                console.log("mentors collection error", err)
+                // console.log("mentors collection error", err)
                 reject(err)
             })
         })
@@ -35,10 +35,10 @@ module.exports = {
     getAllLearners: ()=>{
         return new Promise(async(resolve, reject) => {
             await db.collection(collections.LIVE_COLLECTIONS).find({$or: [{ role: "Learning" },{ role: "Building a Project" }]}).toArray().then((learners)=>{
-                console.log("Learners are:", learners)
+                // console.log("Learners are:", learners)
                 resolve(learners)
             }).catch((err)=>{
-                console.log("Listener collection error", err)
+                // console.log("Listener collection error", err)
                 reject(err)
             })
         })
@@ -47,10 +47,10 @@ module.exports = {
     getAllExplores: () => {
         return new Promise(async (resolve, reject) => {
             await db.collection(collections.LIVE_COLLECTIONS).find({ role: "Explore" }).toArray().then((explores) => {
-                console.log("Explorers are:", explores)
+                // console.log("Explorers are:", explores)
                 resolve(explores)
             }).catch((err) => {
-                console.log("explores collection error", err);
+                // console.log("explores collection error", err);
                 reject(err)
             })
         })
