@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const userHelpers = require('../helpers/user_helpers')
+const userHelpers = require('../helpers/user_helpers');
 
 
 // GET home page
@@ -30,26 +30,81 @@ router.post('/users', (req, res) => {
 })
 
 
-// GET live users page
-router.get('/live', (req, res) => {
-  userHelpers.getAllUsers().then((userData) => {
-    if (userData.length >= 6) {
-      res.render('live_users', {
-        title: 'Live',
-        header: true,
-        style: 'live_users.css',
-        allUsersData: userData
-      })
+// GET all users in the category mentor
+router.get('/live', async (req, res) => {
+
+  let mentors = {}
+  let mentorStatus = false
+  let allMentors = {}
+  let allMentorsStatus = false
+  let learners = {}
+  let learnersStatus = false
+  let allLearners = {}
+  let allLearnersStatus = false
+  let explores = {}
+  let exploresStatus = false
+  let allExplores = {}
+  let allExploresStatus = false
+
+  await userHelpers.getAllMentors().then((mentorsData) => {
+
+    if (mentorsData.length >= 6) {
+      allMentors = mentorsData
+      allMentorsStatus = true
     } else {
-      res.render('live_users', {
-        title: 'Live',
-        header: true,
-        style: 'live_users.css',
-        users: userData
-      })
+      mentors = mentorsData
+      mentorStatus = true
     }
+
+  }).catch((err) => {
+    console.log(err)
+  })
+
+  await userHelpers.getAllLearners().then((learnersData) => {
+
+    if (learnersData.length >= 6) {
+      allLearners = learnersData
+      allLearnersStatus = true
+    } else {
+      learners = learnersData
+      learnersStatus = true
+    }
+
+  }).catch((err) => {
+    console.log(err)
+  })
+
+  await userHelpers.getAllExplores().then((exploresData) => {
+
+    if (exploresData.length >= 6) {
+      allExplores = exploresData
+      allExploresStatus = true
+    } else {
+      explores = exploresData
+      exploresStatus = true
+    }
+
+  }).catch((err) => {
+    console.log(err);
+  })
+
+  res.render('live_users', {
+    title: 'Live',
+    header: true,
+    style: 'live_users.css',
+    mentors,
+    mentorStatus,
+    allMentors,
+    allMentorsStatus,
+    learners,
+    learnersStatus,
+    allLearners,
+    allLearnersStatus,
+    explores,
+    exploresStatus,
+    allExplores,
+    allExploresStatus
   })
 })
-
 
 module.exports = router;

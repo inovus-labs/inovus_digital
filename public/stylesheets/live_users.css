@@ -7,16 +7,16 @@
     padding-top: 20px;
 }
 
-.inner-container{
+.inner-container {
     padding: 0px 50px 0px 50px;
 }
 
-.corousel{
+.corousel {
     display: inline-block;
     margin-bottom: 20px;
 }
 
-.corousel-card{
+.corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
     padding: 25px;
     border-radius: 8px;
@@ -40,7 +40,7 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.img-div{
+.img-div {
     display: flex;
     justify-content: center;
 }
@@ -50,7 +50,7 @@
     height: 60px;
 }
 
-.user-details-div{
+.user-details-div {
     padding-top: 16px;
 }
 
