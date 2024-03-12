@@ -4,11 +4,36 @@
 }
 
 .outer-container {
-    padding-top: 20px;
+    padding-top: 4px;
 }
 
 .inner-container {
     padding: 0px 50px 0px 50px;
+}
+
+.header {
+    margin: 0;
+    font-size: 24px;
+    padding: 10px 0px 10px 0;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.counter {
+    margin: 0;
+    color: white;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: var(--secondary-font);
 }
 
 .corousel {

@@ -2,7 +2,7 @@
     <div class="inner-container">
 
         {{#if mentorStatus}}
-        <h3>Mentors</h3>
+        <h3 class="header"><span class="badge counter">{{mentors.length}}</span>&nbsp;Mentors</h3>
         {{#each mentors}}
         <div class="corousel">
             <div class="card corousel-card">
@@ -25,7 +25,7 @@
         {{/if}}
 
         {{#if allMentorsStatus}}
-        <h3>All Mentors</h3>
+        <h3 class="header"><span class="badge counter">{{allMentors.length}}</span>&nbsp;Mentors</h3>
         <div class="owl-carousel">
             {{#each allMentors}}
             <div class="card owl-corousel-card">
@@ -49,7 +49,7 @@
 
 
         {{#if learnersStatus}}
-        <h3>Learners</h3>
+        <h3 class="header"><span class="badge counter">{{learners.length}}</span>&nbsp;Learners</h3>
         {{#each learners}}
         <div class="corousel">
             <div class="card corousel-card">
@@ -72,7 +72,7 @@
         {{/if}}
 
         {{#if allLearnersStatus}}
-        <h3>All Learners</h3>
+        <h3 class="header"><span class="badge counter">{{allLearners.length}}</span>&nbsp;Learners</h3>
         <div class="owl-carousel">
             {{#each allLearners}}
             <div class="card owl-corousel-card">
@@ -96,7 +96,7 @@
 
 
         {{#if exploresStatus}}
-        <h3>Explores</h3>
+        <h3 class="header"><span class="badge counter">{{explores.length}}</span>&nbsp;Explores</h3>
         {{#each explores}}
         <div class="corousel">
             <div class="card corousel-card">
@@ -119,7 +119,7 @@
         {{/if}}
 
         {{#if allExploresStatus}}
-        <h3>All Explores</h3>
+        <h3 class="header"><span class="badge counter">{{allExplores.length}}</span>&nbsp;Explores</h3>
         <div class="owl-carousel">
             {{#each allExplores}}
             <div class="card owl-corousel-card">
