@@ -56,19 +56,27 @@ router.post('/users', (req, res) => {
 router.get('/live', async (req, res) => {
 
   let mentors = {}
+  let mentorStatus = false
   let allMentors = {}
+  let allMentorsStatus = false
   let learners = {}
+  let learnersStatus = false
   let allLearners = {}
+  let allLearnersStatus = false
   let explores = {}
+  let exploresStatus = false
   let allExplores = {}
+  let allExploresStatus = false
 
   await userHelpers.getAllMentors().then((mentorsData) => {
     console.log("Mentors Data", mentorsData)
 
     if (mentorsData.length >= 6) {
       allMentors = mentorsData
+      allMentorsStatus = true
     } else {
       mentors = mentorsData
+      mentorStatus = true
     }
 
   }).catch((err) => {
@@ -80,8 +88,10 @@ router.get('/live', async (req, res) => {
 
     if (learnersData.length >= 6){
       allLearners = learnersData
+      allLearnersStatus = true
     }else{
       learners = learnersData
+      learnersStatus = true
     }
 
   }).catch((err) => {
@@ -93,8 +103,10 @@ router.get('/live', async (req, res) => {
 
     if(exploresData.length >= 6){
       allExplores = exploresData
+      allExploresStatus = true
     }else{
       explores = exploresData
+      exploresStatus = true
     }
 
   }).catch((err) => {
@@ -113,10 +125,18 @@ router.get('/live', async (req, res) => {
     header: true,
     style: 'live_users.css',
     mentors,
+    mentorStatus,
+    allMentors,
+    allMentorsStatus,
     learners,
-    explores
+    learnersStatus,
+    allLearners,
+    allLearnersStatus,
+    explores,
+    exploresStatus,
+    allExplores,
+    allExploresStatus
   })
 })
-
 
 module.exports = router;
