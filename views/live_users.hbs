@@ -1,6 +1,7 @@
 <div class="container-fluid outer-container">
     <div class="inner-container">
 
+        {{#if mentorsCountStatus}}
         {{#if mentorStatus}}
         <h3 class="header"><span class="badge counter">{{mentors.length}}</span>&nbsp;Mentors</h3>
         {{#each mentors}}
@@ -46,8 +47,9 @@
             {{/each}}
         </div>
         {{/if}}
+        {{/if}}
 
-
+        {{#if learnersCountStatus}}
         {{#if learnersStatus}}
         <h3 class="header"><span class="badge counter">{{learners.length}}</span>&nbsp;Learners</h3>
         {{#each learners}}
@@ -93,8 +95,9 @@
             {{/each}}
         </div>
         {{/if}}
+        {{/if}}
 
-
+        {{#if exploresCountStatus}}
         {{#if exploresStatus}}
         <h3 class="header"><span class="badge counter">{{explores.length}}</span>&nbsp;Explores</h3>
         {{#each explores}}
@@ -140,7 +143,7 @@
             {{/each}}
         </div>
         {{/if}}
-
+        {{/if}}
     </div>
 </div>
 
