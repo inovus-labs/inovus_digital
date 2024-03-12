@@ -1,7 +1,7 @@
 <div class="container-fluid outer-container">
     <div class="inner-container">
 
-        {{#if users}}
+        {{!-- {{#if users}}
         {{#each users}}
         <div class="corousel">
             <div class="card corousel-card">
@@ -21,11 +21,80 @@
             </div>
         </div>
         {{/each}}
-        {{/if}}
+        {{/if}} --}}
 
-        {{#if allUsersData}}
+        {{!-- {{#if allUsersData}}
         <div class="owl-carousel">
         {{#each allUsersData}}
+            <div class="card owl-corousel-card">
+                <div class="img-div">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
+                        class="userimg">
+                </div>
+                <div class="user-details-div">
+                    <h4 class="user-name">{{this.name}}</h4>
+                    <p class="user-email">{{this.email}}</p>
+                    <hr class="m-0">
+                    <div>
+                        <p class="user-role">{{this.role}}</p>
+                        <p class="user-pgrm">{{this.program}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+        {{/if}} --}}
+
+        {{#if mentors}}
+        <h3>Mentors</h3>
+        <div class="owl-carousel">
+        {{#each mentors}}
+            <div class="card owl-corousel-card">
+                <div class="img-div">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
+                        class="userimg">
+                </div>
+                <div class="user-details-div">
+                    <h4 class="user-name">{{this.name}}</h4>
+                    <p class="user-email">{{this.email}}</p>
+                    <hr class="m-0">
+                    <div>
+                        <p class="user-role">{{this.role}}</p>
+                        <p class="user-pgrm">{{this.program}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if learners}}
+        <h3>Learners</h3>
+        <div class="owl-carousel">
+        {{#each learners}}
+            <div class="card owl-corousel-card">
+                <div class="img-div">
+                    <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
+                        class="userimg">
+                </div>
+                <div class="user-details-div">
+                    <h4 class="user-name">{{this.name}}</h4>
+                    <p class="user-email">{{this.email}}</p>
+                    <hr class="m-0">
+                    <div>
+                        <p class="user-role">{{this.role}}</p>
+                        <p class="user-pgrm">{{this.program}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if explores}}
+        <h3>Explores</h3>
+        <div class="owl-carousel">
+        {{#each explores}}
             <div class="card owl-corousel-card">
                 <div class="img-div">
                     <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
