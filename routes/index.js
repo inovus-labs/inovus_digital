@@ -30,28 +30,6 @@ router.post('/users', (req, res) => {
 })
 
 
-// GET live users page
-// router.get('/live', (req, res) => {
-//   userHelpers.getAllUsers().then((userData) => {
-//     if (userData.length >= 6) {
-//       res.render('live_users', {
-//         title: 'Live',
-//         header: true,
-//         style: 'live_users.css',
-//         allUsersData: userData
-//       })
-//     } else {
-//       res.render('live_users', {
-//         title: 'Live',
-//         header: true,
-//         style: 'live_users.css',
-//         users: userData
-//       })
-//     }
-//   })
-// })
-
-
 // GET all users in the category mentor
 router.get('/live', async (req, res) => {
 
@@ -69,7 +47,6 @@ router.get('/live', async (req, res) => {
   let allExploresStatus = false
 
   await userHelpers.getAllMentors().then((mentorsData) => {
-    console.log("Mentors Data", mentorsData)
 
     if (mentorsData.length >= 6) {
       allMentors = mentorsData
@@ -84,12 +61,11 @@ router.get('/live', async (req, res) => {
   })
 
   await userHelpers.getAllLearners().then((learnersData) => {
-    console.log("Leaners Data", learnersData)
 
-    if (learnersData.length >= 6){
+    if (learnersData.length >= 6) {
       allLearners = learnersData
       allLearnersStatus = true
-    }else{
+    } else {
       learners = learnersData
       learnersStatus = true
     }
@@ -99,12 +75,11 @@ router.get('/live', async (req, res) => {
   })
 
   await userHelpers.getAllExplores().then((exploresData) => {
-    console.log("Explorers Data", exploresData)
 
-    if(exploresData.length >= 6){
+    if (exploresData.length >= 6) {
       allExplores = exploresData
       allExploresStatus = true
-    }else{
+    } else {
       explores = exploresData
       exploresStatus = true
     }
@@ -112,13 +87,6 @@ router.get('/live', async (req, res) => {
   }).catch((err) => {
     console.log(err);
   })
-
-  console.log("mentors : ", mentors)
-  console.log("All mentors: ", allMentors)
-  console.log("Learners : ", learners)
-  console.log("All Learners : ", allLearners)
-  console.log("Explorers : ", explores)
-  console.log("All Explorers : ", allExplores)
 
   res.render('live_users', {
     title: 'Live',
