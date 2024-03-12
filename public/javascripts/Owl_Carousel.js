@@ -7,19 +7,22 @@ $(document).ready(() => {
         autoplayTimeout: 2000,
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             320: {
-                items: 3
+                items: 4
+            },
+            768: {
+                items: 4
             },
             1024: {
                 items: 4
             },
             1440: {
-                items: 5
+                items: 6
             },
             2000: {
-                items: 6
+                items: 10
             }
         }
     })

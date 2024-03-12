@@ -4,11 +4,36 @@
 }
 
 .outer-container {
-    padding-top: 20px;
+    padding-top: 4px;
 }
 
 .inner-container {
     padding: 0px 50px 0px 50px;
+}
+
+.header {
+    margin: 0;
+    font-size: 24px;
+    padding: 10px 0px 10px 0;
+    font-weight: 700;
+    font-family: var(--primary-font);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.counter {
+    margin: 0;
+    color: white;
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: var(--secondary-font);
 }
 
 .corousel {
@@ -18,10 +43,10 @@
 
 .corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
-    height: 260px;
-    width: 200px;
+    height: 220px;
+    width: 180px;
     margin-right: 20px;
 }
 
@@ -31,9 +56,10 @@
 
 .owl-corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
-    height: 260px;
+    height: 220px;
+    width: 180px;
 }
 
 .owl-corousel-card:hover {
@@ -69,12 +95,12 @@
     text-align: left;
     font-family: var(--secondary-font);
     color: grey;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .user-role {
     margin: 0;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 14px;
     font-weight: 600;
     text-align: left;
@@ -88,5 +114,9 @@
     font-size: 12px;
     font-weight: 500;
     color: black;
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-family: var(--secondary-font);
 }
