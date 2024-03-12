@@ -18,10 +18,10 @@
 
 .corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
-    height: 260px;
-    width: 200px;
+    height: 220px;
+    width: 180px;
     margin-right: 20px;
 }
 
@@ -31,9 +31,10 @@
 
 .owl-corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
-    height: 260px;
+    height: 220px;
+    width: 180px;
 }
 
 .owl-corousel-card:hover {
@@ -69,12 +70,12 @@
     text-align: left;
     font-family: var(--secondary-font);
     color: grey;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .user-role {
     margin: 0;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 14px;
     font-weight: 600;
     text-align: left;
@@ -88,5 +89,9 @@
     font-size: 12px;
     font-weight: 500;
     color: black;
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-family: var(--secondary-font);
 }
