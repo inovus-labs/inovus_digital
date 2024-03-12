@@ -1,6 +1,6 @@
 <div class="container-fluid outer-container">
     <div class="inner-container">
-
+        <h3 id="animatedText" class="blink"><i class="bi bi-arrow-repeat"></i>&nbsp;Syncing...</h3>
         {{#if mentorsCountStatus}}
         {{#if mentorStatus}}
         <h3 class="header"><span class="badge counter">{{mentors.length}}</span>&nbsp;Mentors</h3>
@@ -148,3 +148,15 @@
 </div>
 
 <script src="/javascripts/Owl_Carousel.js"></script>
+
+<script>
+
+    setTimeout(() => {
+        document.getElementById('animatedText').style.display = 'block';
+    }, 50000); 
+
+
+    setTimeout(() => {
+        window.location.href = '/live'
+    }, 60000);
+</script>
