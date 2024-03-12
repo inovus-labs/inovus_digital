@@ -32,7 +32,7 @@ module.exports = {
 
     getAllLearners: () => {
         return new Promise(async (resolve, reject) => {
-            await db.collection(collections.LIVE_COLLECTIONS).find({ $or: [{ role: "Learning" }, { role: "Building a Project" }] }).toArray().then((learners) => {
+            await db.collection(collections.LIVE_COLLECTIONS).find({ role: "Learner" }).toArray().then((learners) => {
                 resolve(learners)
             }).catch((err) => {
                 reject(err)
@@ -42,7 +42,7 @@ module.exports = {
 
     getAllExplores: () => {
         return new Promise(async (resolve, reject) => {
-            await db.collection(collections.LIVE_COLLECTIONS).find({ role: "Explore" }).toArray().then((explores) => {
+            await db.collection(collections.LIVE_COLLECTIONS).find({ role: "Explorer" }).toArray().then((explores) => {
                 resolve(explores)
             }).catch((err) => {
                 reject(err)

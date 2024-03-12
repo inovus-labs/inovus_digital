@@ -13,10 +13,10 @@ $(document).ready(() => {
                 items: 4
             },
             768: {
-                items: 4
+                items: 5
             },
             1024: {
-                items: 4
+                items: 5
             },
             1440: {
                 items: 6

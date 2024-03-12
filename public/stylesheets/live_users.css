@@ -43,10 +43,10 @@
 
 .corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    height: 220px;
-    width: 180px;
+    height: 180px;
+    width: 150px;
     margin-right: 20px;
 }
 
@@ -56,10 +56,10 @@
 
 .owl-corousel-card {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    height: 220px;
-    width: 180px;
+    height: 180px;
+    width: 150px;
 }
 
 .owl-corousel-card:hover {
@@ -87,6 +87,10 @@
     font-weight: 700;
     color: black;
     font-family: var(--primary-font);
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .user-email {
@@ -114,7 +118,7 @@
     font-size: 12px;
     font-weight: 500;
     color: black;
-    width: 110px;
+    width: 130px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
