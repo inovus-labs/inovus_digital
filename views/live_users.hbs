@@ -16,7 +16,6 @@
                     <p class="user-email">{{this.email}}</p>
                     <hr class="m-0">
                     <div>
-                        {{!-- <p class="user-role">{{this.role}}</p> --}}
                         <p class="user-pgrm">{{this.program}}</p>
                     </div>
                 </div>
@@ -39,7 +38,6 @@
                     <p class="user-email">{{this.email}}</p>
                     <hr class="m-0">
                     <div>
-                        {{!-- <p class="user-role">{{this.role}}</p> --}}
                         <p class="user-pgrm">{{this.program}}</p>
                     </div>
                 </div>
@@ -64,7 +62,6 @@
                     <p class="user-email">{{this.email}}</p>
                     <hr class="m-0">
                     <div>
-                        {{!-- <p class="user-role">{{this.role}}</p> --}}
                         <p class="user-pgrm">{{this.program}}</p>
                     </div>
                 </div>
@@ -87,55 +84,6 @@
                     <p class="user-email">{{this.email}}</p>
                     <hr class="m-0">
                     <div>
-                        {{!-- <p class="user-role">{{this.role}}</p> --}}
-                        <p class="user-pgrm">{{this.program}}</p>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
-        </div>
-        {{/if}}
-        {{/if}}
-
-        {{#if exploresCountStatus}}
-        {{#if exploresStatus}}
-        <h3 class="header"><span class="badge counter">{{explores.length}}</span>&nbsp;Explores</h3>
-        {{#each explores}}
-        <div class="corousel">
-            <div class="card corousel-card">
-                <div class="img-div">
-                    <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
-                        class="userimg">
-                </div>
-                <div class="user-details-div">
-                    <h4 class="user-name">{{this.name}}</h4>
-                    <p class="user-email">{{this.email}}</p>
-                    <hr class="m-0">
-                    <div>
-                        {{!-- <p class="user-role">{{this.role}}</p> --}}
-                        <p class="user-pgrm">{{this.program}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-        {{/if}}
-
-        {{#if allExploresStatus}}
-        <h3 class="header"><span class="badge counter">{{allExplores.length}}</span>&nbsp;Explores</h3>
-        <div class="owl-carousel">
-            {{#each allExplores}}
-            <div class="card owl-corousel-card">
-                <div class="img-div">
-                    <img src="https://api.dicebear.com/7.x/initials/svg?radius=50&seed={{this.name}}" alt="Avatar"
-                        class="userimg">
-                </div>
-                <div class="user-details-div">
-                    <h4 class="user-name">{{this.name}}</h4>
-                    <p class="user-email">{{this.email}}</p>
-                    <hr class="m-0">
-                    <div>
-                        {{!-- <p class="user-role">{{this.role}}</p> --}}
                         <p class="user-pgrm">{{this.program}}</p>
                     </div>
                 </div>
