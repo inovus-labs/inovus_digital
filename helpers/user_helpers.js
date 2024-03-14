@@ -40,16 +40,6 @@ module.exports = {
         })
     },
 
-    getAllExplores: () => {
-        return new Promise(async (resolve, reject) => {
-            await db.collection(collections.LIVE_COLLECTIONS).find({ role: "Explorer" }).toArray().then((explores) => {
-                resolve(explores)
-            }).catch((err) => {
-                reject(err)
-            })
-        })
-    },
-
     dropCollection: () => {
         return new Promise((resolve, reject) => {
             db.collection(collections.LIVE_COLLECTIONS).drop().then((response) => {
