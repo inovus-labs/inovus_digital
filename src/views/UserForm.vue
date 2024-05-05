@@ -13,21 +13,21 @@
                     <p class="mb-2 text-base font-semibold text-white font-Oswald">Name</p>
                     <input type="text" id="name"
                         class="w-full p-2 text-black font-Oswald rounded-xl bg-yellow text-sm font-semibold focus:outline-none focus:ring focus:ring-white"
-                        autocomplete="off" required v-model="formValue.name">
+                        autocomplete="off" required v-model="userData.name">
                 </div>
 
                 <div class="mt-5">
                     <p class="mb-2 text-base font-semibold text-white font-Oswald">Email</p>
                     <input type="text" id="email"
                         class="w-full p-2 text-black font-Oswald rounded-xl bg-yellow text-sm font-semibold focus:outline-none focus:ring focus:ring-white"
-                        autocomplete="off" required v-model="formValue.email">
+                        autocomplete="off" required v-model="userData.email">
                 </div>
 
                 <div class="mt-5">
                     <p for="role" class="mb-2 text-base font-semibold text-white font-Oswald">Purpose of your visit</p>
                     <select id="purpose"
                         class="text-black font-Oswald text-sm font-semibold rounded-xl w-full p-2 bg-yellow focus:outline-none focus:ring focus:ring-white"
-                        required v-model="formValue.purpose">
+                        required v-model="userData.purpose">
                         <option>Self learn</option>
                         <option>Buid a project</option>
                         <option>Explore</option>
@@ -40,14 +40,14 @@
                         working on today</p>
                     <input type="text" id="program"
                         class="w-full p-2 text-black font-Oswald rounded-xl bg-yellow text-sm font-semibold focus:outline-none focus:ring focus:ring-white"
-                        autocomplete="off" required v-model="formValue.program">
+                        autocomplete="off" required v-model="userData.program">
                 </div>
 
                 <div class="mt-5">
                     <p for="role" class="mb-2 text-base font-semibold text-white font-Oswald">Role</p>
                     <select id="role"
                         class="text-black font-Oswald text-sm font-semibold rounded-xl w-full p-2 bg-yellow focus:outline-none focus:ring focus:ring-white"
-                        required v-model="formValue.role">
+                        required v-model="userData.role">
                         <option>Mentee</option>
                         <option>Mentor</option>
                     </select>
@@ -66,22 +66,36 @@
 
 <script>
 
+import axios from 'axios'
+
 export default {
     name: 'UserForm',
     data() {
         return {
-            formValue: {
+            userData: {
                 name: '',
                 email: '',
                 purpose: '',
                 program: '',
                 role: ''
-            }
+
+            },
+
+            searchResult: ''
         }
     },
     methods: {
-        submitForm() {
-            console.log('Form values', this.formValue)
+
+        async submitForm() {
+
+            await axios.post(`http://localhost:3000/api/v1/users${this.userData}`).then((response) => {
+                console.log('URL:' `http://localhost:3000/api/v1/users${this.userData}`)
+                this.searchResult = response.data
+                console.log('Result', this.searchResult)
+            }).catch((err) => {
+                console.log(err)
+            })
+            console.log('Form values', this.userData)
         }
     }
 }
