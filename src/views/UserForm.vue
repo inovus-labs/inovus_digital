@@ -87,15 +87,13 @@ export default {
     methods: {
 
         async submitForm() {
-
-            await axios.post(`http://localhost:3000/api/v1/users${this.userData}`).then((response) => {
-                console.log('URL:' `http://localhost:3000/api/v1/users${this.userData}`)
+            await axios.post(`http://localhost:3000/api/v1/users`, this.userData).then((response) => {
                 this.searchResult = response.data
                 console.log('Result', this.searchResult)
             }).catch((err) => {
                 console.log(err)
             })
-            console.log('Form values', this.userData)
+            // console.log('Form values', this.userData)
         }
     }
 }
